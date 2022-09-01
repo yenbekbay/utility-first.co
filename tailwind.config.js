@@ -4,7 +4,7 @@ const defaultTheme = require('tailwindcss/defaultTheme')
 const palette = {
   primary: '#0B64FE',
   secondary: '#000',
-  background: '#F2F2F2',
+  background: '#E7E7E7',
 }
 
 /**

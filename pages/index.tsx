@@ -9,7 +9,7 @@ export default function Index() {
     return null
   }
   return (
-    <article className="prose h-screen p-4 prose-headings:font-display prose-headings:font-bold lg:prose-xl">
+    <article className="prose-lg prose h-screen p-4 leading-normal prose-headings:font-display prose-headings:font-bold lg:prose-2xl">
       <h1 className="mb-0 lowercase lg:mb-0">Utility First</h1>
       <p>A digital product studio in Almaty, Kazakhstan. Coming soon.</p>
     </article>

@@ -16,8 +16,8 @@ module.exports = {
     extend: {
       colors: palette,
       fontFamily: {
-        serif: ['"Inria Serif"', ...defaultTheme.fontFamily.serif],
-        display: ['Panamera', ...defaultTheme.fontFamily.sans],
+        serif: ['Lucette', ...defaultTheme.fontFamily.serif],
+        display: ['Dinish', ...defaultTheme.fontFamily.sans],
       },
       typography: {
         DEFAULT: {

@@ -2,42 +2,44 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
-@font-face {
-  font-family: 'Inria Serif';
-  font-weight: 400;
-  font-style: normal;
-  src: url('/fonts/InriaSerif-Regular.woff2') format('woff2'),
-    url('/fonts/InriaSerif-Regular.woff') format('woff');
+@layer base {
+  @font-face {
+    font-family: 'Lucette';
+    font-weight: 400;
+    font-style: normal;
+    src: url('/fonts/Lucette-Regular.woff2') format('woff2'),
+      url('/fonts/Lucette-Regular.woff') format('woff');
+  }
+
+  @font-face {
+    font-family: 'Lucette';
+    font-weight: 400;
+    font-style: italic;
+    src: url('/fonts/Lucette-RegularItalic.woff2') format('woff2'),
+      url('/fonts/Lucette-RegularItalic.woff') format('woff');
+  }
+
+  @font-face {
+    font-family: 'Dinish';
+    font-weight: 700;
+    font-style: normal;
+    src: url('/fonts/Dinish-Bold.woff2') format('woff2'),
+      url('/fonts/Dinish-Bold.woff') format('woff');
+  }
 }
 
-@font-face {
-  font-family: 'Inria Serif';
-  font-weight: 400;
-  font-style: italic;
-  src: url('/fonts/InriaSerif-Italic.woff2') format('woff2'),
-    url('/fonts/InriaSerif-Italic.woff') format('woff');
-}
+@layer utilities {
+  @supports (height: 100dvh) {
+    .h-screen {
+      height: 100dvh;
+    }
 
-@font-face {
-  font-family: 'Inria Serif';
-  font-weight: 700;
-  font-style: normal;
-  src: url('/fonts/InriaSerif-Bold.woff2') format('woff2'),
-    url('/fonts/InriaSerif-Bold.woff') format('woff');
-}
+    .min-h-screen {
+      min-height: 100dvh;
+    }
 
-@font-face {
-  font-family: 'Inria Serif';
-  font-weight: 700;
-  font-style: italic;
-  src: url('/fonts/InriaSerif-BoldItalic.woff2') format('woff2'),
-    url('/fonts/InriaSerif-BoldItalic.woff') format('woff');
-}
-
-@font-face {
-  font-family: 'Panamera';
-  font-weight: 400;
-  font-style: normal;
-  src: url('/fonts/Panamera-Regular.woff2') format('woff2'),
-    url('/fonts/Panamera-Regular.woff') format('woff');
+    .max-h-screen {
+      max-height: 100dvh;
+    }
+  }
 }

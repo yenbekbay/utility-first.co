@@ -1,0 +1,43 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+@font-face {
+  font-family: 'Inria Serif';
+  font-weight: 400;
+  font-style: normal;
+  src: url('/fonts/InriaSerif-Regular.woff2') format('woff2'),
+    url('/fonts/InriaSerif-Regular.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Inria Serif';
+  font-weight: 400;
+  font-style: italic;
+  src: url('/fonts/InriaSerif-Italic.woff2') format('woff2'),
+    url('/fonts/InriaSerif-Italic.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Inria Serif';
+  font-weight: 700;
+  font-style: normal;
+  src: url('/fonts/InriaSerif-Bold.woff2') format('woff2'),
+    url('/fonts/InriaSerif-Bold.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Inria Serif';
+  font-weight: 700;
+  font-style: italic;
+  src: url('/fonts/InriaSerif-BoldItalic.woff2') format('woff2'),
+    url('/fonts/InriaSerif-BoldItalic.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Panamera';
+  font-weight: 400;
+  font-style: normal;
+  src: url('/fonts/Panamera-Regular.woff2') format('woff2'),
+    url('/fonts/Panamera-Regular.woff') format('woff');
+}

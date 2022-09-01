@@ -1,0 +1,97 @@
+{
+  "name": "utility-first.co",
+  "private": true,
+  "description": "",
+  "license": "GPL-3.0",
+  "sideEffects": false,
+  "scripts": {
+    "build": "run-s --silent build:*",
+    "build:css": "pnpm run generate:css --minify",
+    "build:next": "next build",
+    "dev": "run-p --silent dev:*",
+    "dev:css": "pnpm run generate:css --watch",
+    "dev:next": "next dev",
+    "generate:css": "tailwindcss -i ./global.css -o ./__generated__/tailwind.css",
+    "lint": "eslint --ext .js,.ts,.tsx --cache .",
+    "preinstall": "npx only-allow pnpm",
+    "prepare": "husky install",
+    "start": "next start",
+    "typecheck": "tsc --project . --noEmit"
+  },
+  "lint-staged": {
+    "**/*.{js,ts,tsx,json,css,yml,yaml}": "prettier --write",
+    "**/*.{js,ts,tsx}": "eslint --ext .js,.ts,.tsx --cache --fix"
+  },
+  "eslintConfig": {
+    "plugins": [
+      "@typescript-eslint",
+      "tailwindcss"
+    ],
+    "extends": [
+      "next/core-web-vitals",
+      "plugin:@typescript-eslint/recommended",
+      "plugin:tailwindcss/recommended"
+    ],
+    "rules": {
+      "arrow-body-style": "warn",
+      "object-shorthand": "warn",
+      "prefer-const": "warn",
+      "quotes": [
+        "warn",
+        "single"
+      ],
+      "@typescript-eslint/ban-ts-comment": "off",
+      "@typescript-eslint/consistent-type-assertions": "warn",
+      "@typescript-eslint/consistent-type-imports": "warn",
+      "@typescript-eslint/no-empty-function": "off",
+      "@typescript-eslint/no-explicit-any": "off",
+      "@typescript-eslint/no-extra-semi": "off",
+      "@typescript-eslint/no-non-null-assertion": "off",
+      "@typescript-eslint/no-var-requires": "off",
+      "import/no-unresolved": "error",
+      "jsx-a11y/alt-text": "off",
+      "react/jsx-curly-brace-presence": "warn",
+      "react/no-unescaped-entities": "off"
+    },
+    "ignorePatterns": [
+      "**/__generated__/**",
+      "/.next/**",
+      "/public/**"
+    ]
+  },
+  "dependencies": {
+    "next": "12.2.5",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-error-boundary": "3.1.4",
+    "use-font-face-observer": "1.2.1"
+  },
+  "devDependencies": {
+    "@tailwindcss/typography": "0.5.4",
+    "@trivago/prettier-plugin-sort-imports": "3.3.0",
+    "@types/node": "16.11.7",
+    "@types/prettier": "2.7.0",
+    "@types/react": "18.0.18",
+    "@types/react-dom": "18.0.6",
+    "@typescript-eslint/eslint-plugin": "5.36.1",
+    "@typescript-eslint/parser": "^5.36.1",
+    "eslint": "8.23.0",
+    "eslint-config-next": "12.2.5",
+    "eslint-plugin-tailwindcss": "3.6.1",
+    "husky": "8.0.1",
+    "lint-staged": "13.0.3",
+    "npm-run-all": "4.1.5",
+    "prettier": "2.7.1",
+    "prettier-plugin-packagejson": "2.2.18",
+    "tailwindcss": "3.1.8",
+    "typescript": "4.8.2"
+  },
+  "engines": {
+    "node": ">=16"
+  },
+  "pnpm": {
+    "overrides": {
+      "react": "18.2.0"
+    }
+  }
+}

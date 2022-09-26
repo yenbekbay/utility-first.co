@@ -25,7 +25,7 @@ export default function App({Component, pageProps}: AppProps) {
 
 function ErrorFallback({error}: FallbackProps) {
   return (
-    <article className="container prose-2xl prose p-4 prose-headings:font-display prose-headings:font-normal">
+    <article className="prose-lg prose h-screen p-4 leading-normal prose-headings:font-display prose-headings:font-bold lg:prose-2xl">
       <h1>Something went wrong!</h1>
 
       <pre className="items-start whitespace-pre-line rounded-md border border-red-600 bg-background font-mono text-red-600">

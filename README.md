@@ -1,3 +1,3 @@
-# utility-first.studio
+# utility-first.co
 
-[utility-first.studio](https://utility-first.studio)
+[utility-first.co](https://utility-first.co)

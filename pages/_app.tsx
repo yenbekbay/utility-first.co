@@ -30,7 +30,7 @@ export default function App({Component, pageProps}: AppProps) {
 function ErrorFallback({error}: FallbackProps) {
   return (
     <Layout>
-      <article className="prose max-w-md leading-tight">
+      <article className="prose">
         <h1>Something went wrong!</h1>
 
         <pre className="items-start whitespace-pre-line rounded-md border border-red-600 bg-background font-mono text-red-600">

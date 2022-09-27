@@ -14,9 +14,7 @@ export function getStaticPaths() {
 
 export function getStaticProps({params}: GetStaticPropsContext) {
   // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-  const project = allProjects.find(
-    (project) => project._raw.flattenedPath === params?.slug,
-  )!
+  const project = allProjects.find((p) => p.slug === params?.slug)!
   return {
     props: {project},
   }
@@ -32,7 +30,7 @@ export default function ProjectLayout({
         <title>{project.title} | Utility First</title>
       </Head>
 
-      <article className="prose max-w-md leading-tight">
+      <article className="prose">
         <h1>{project.title}</h1>
 
         <time dateTime={project.year} className="text-sm text-gray-500">

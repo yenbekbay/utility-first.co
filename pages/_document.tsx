@@ -2,7 +2,7 @@ import {Head, Html, Main, NextScript} from 'next/document'
 
 export default function Document() {
   return (
-    <Html className="bg-background text-[28px] selection:bg-primary selection:text-white">
+    <Html className="bg-background text-[18px] selection:bg-primary selection:text-white md:text-[24px]">
       <Head>
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
         <link

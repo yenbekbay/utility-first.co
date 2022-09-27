@@ -28,35 +28,29 @@ export default function Index({
 }: InferGetStaticPropsType<typeof getStaticProps>) {
   return (
     <Layout>
-      <article className="prose max-w-md leading-tight md:prose-2xl md:leading-tight">
-        <p>
-          Utility First is a{' '}
-          <span className="font-serif text-[1.125em] italic">
-            design-driven
-          </span>{' '}
-          digital product studio located in Almaty, Kazakhstan.
-        </p>
+      <article className="prose">
+        <h1>
+          Utility First is a <em>design-driven</em> digital product studio
+          located in Almaty, Kazakhstan.
+        </h1>
       </article>
 
-      <div className="grid grid-cols-1 gap-2 py-8">
-        {projects.map((p, idx) => (
-          <Link
-            key={p.slug}
-            href={`/work/${p.slug}`}
-            className="group block text-lg text-content">
-            <div className="prose max-w-md leading-tight">
+      <div className="grid grid-cols-1 gap-2 py-8 md:grid-cols-2">
+        {projects.map((p) => (
+          <Link key={p.slug} href={`/work/${p.slug}`} className="group">
+            <div className="prose">
               <Image
                 src={p.coverImageSrc}
                 alt={`Thumbnail for ${p.title}`}
                 placeholder="blur"
-                className="mb-2 w-64 max-w-full rounded-lg"
+                className="mb-2 max-w-full rounded-lg"
               />
 
-              <time dateTime={p.year} className="text-xs text-gray-500">
+              <time dateTime={p.year} className="block text-xs text-gray-500">
                 {p.year}
               </time>
 
-              <span className="block text-lg group-hover:underline group-active:underline">
+              <span className="block text-lg leading-tight group-hover:underline group-active:underline">
                 {p.title}
               </span>
             </div>

@@ -2,23 +2,29 @@ import {defineDocumentType, makeSource} from 'contentlayer/source-files'
 
 export const Project = defineDocumentType(() => ({
   name: 'Project',
-  filePathPattern: '**/*.md',
+  filePathPattern: '**/*.mdx',
+  contentType: 'mdx',
   fields: {
     title: {
       type: 'string',
       description: 'The title of the project',
       required: true,
     },
-    date: {
-      type: 'date',
-      description: 'The date of the project',
+    year: {
+      type: 'string',
+      description: 'The year of the project',
+      required: true,
+    },
+    coverImageSrc: {
+      type: 'string',
+      description: 'The path to the cover image of the project',
       required: true,
     },
   },
   computedFields: {
-    url: {
+    slug: {
       type: 'string',
-      resolve: (project) => `/work/${project._raw.flattenedPath}`,
+      resolve: (project) => project._raw.flattenedPath,
     },
   },
 }))

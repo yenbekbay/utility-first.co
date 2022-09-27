@@ -1,4 +1,5 @@
 import '__generated__/tailwind.css'
+import Layout from 'components/Layout'
 import type {AppProps} from 'next/app'
 import Head from 'next/head'
 import {ErrorBoundary} from 'react-error-boundary'
@@ -14,6 +15,9 @@ export default function App({Component, pageProps}: AppProps) {
           name="description"
         />
         <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <meta name="description" content="Utility First" />
+        <meta name="og:title" content="Utility First" />
+        <meta name="apple-mobile-web-app-title" content="Utility First" />
       </Head>
 
       <ErrorBoundary FallbackComponent={ErrorFallback}>
@@ -25,12 +29,14 @@ export default function App({Component, pageProps}: AppProps) {
 
 function ErrorFallback({error}: FallbackProps) {
   return (
-    <article className="prose-lg prose h-screen p-4 leading-normal prose-headings:font-display prose-headings:font-bold lg:prose-2xl">
-      <h1>Something went wrong!</h1>
+    <Layout>
+      <article className="prose max-w-md leading-tight">
+        <h1>Something went wrong!</h1>
 
-      <pre className="items-start whitespace-pre-line rounded-md border border-red-600 bg-background font-mono text-red-600">
-        {error.message}
-      </pre>
-    </article>
+        <pre className="items-start whitespace-pre-line rounded-md border border-red-600 bg-background font-mono text-red-600">
+          {error.message}
+        </pre>
+      </article>
+    </Layout>
   )
 }

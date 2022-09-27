@@ -15,12 +15,14 @@ export default function Layout({children}: {children: React.ReactNode}) {
   }
   return (
     <>
-      <header className="grid grid-cols-1 gap-4 border-b border-b-gray-500/20 p-2 md:grid-cols-2">
-        <Link
-          href="/"
-          className="translate-y-[-0.05em] font-display text-2xl font-bold lowercase leading-none text-primary">
-          Utility First
-        </Link>
+      <header className="sticky top-0 grid grid-cols-1 items-center bg-background p-2 md:grid-cols-2 md:gap-2">
+        <div>
+          <Link
+            href="/"
+            className="font-display text-xl font-bold lowercase leading-tight text-primary">
+            Utility First
+          </Link>
+        </div>
 
         <NavigationMenu.Root>
           <NavigationMenu.List className="grid auto-cols-min grid-flow-col gap-2 md:justify-end">
@@ -47,7 +49,15 @@ export default function Layout({children}: {children: React.ReactNode}) {
         </NavigationMenu.Root>
       </header>
 
-      <main className="px-2 pt-16 pb-2">{children}</main>
+      <main className="px-2 py-16">{children}</main>
+
+      <footer className="prose p-2 leading-tight">
+        <p>
+          <span className="text-sm">©2022</span>
+          <br />
+          <span className="text-sm text-gray-500">All rights reserved</span>
+        </p>
+      </footer>
     </>
   )
 }

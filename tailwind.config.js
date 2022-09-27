@@ -1,11 +1,12 @@
+const colors = require('tailwindcss/colors')
 const defaultTheme = require('tailwindcss/defaultTheme')
 const plugin = require('tailwindcss/plugin')
 
 // https://access.mymind.com/colors/eyJ0IjoiUGFyYWRpc28iLCJjIjpbIiNGMkYyRjIiLCIjMDAwMDAwIiwiIzBCNjRGRSJdfQ
 const palette = {
   primary: '#0B64FE',
-  secondary: '#000',
-  content: '#000',
+  secondary: colors.black,
+  content: colors.black,
   background: '#E7E7E7',
 }
 
@@ -25,16 +26,38 @@ module.exports = {
       typography: {
         DEFAULT: {
           css: {
-            '--tw-prose-body': palette.content,
-            '--tw-prose-headings': palette.content,
-            '--tw-prose-links': palette.primary,
-            '--tw-prose-bold': palette.content,
-            '--tw-prose-quotes': palette.content,
-            '--tw-prose-code': palette.content,
-            '--tw-prose-pre-bg': palette.content,
-            '--tw-prose-invert-hr': palette.content,
-            '--tw-prose-invert-quote-borders': palette.content,
-            '--tw-prose-invert-td-borders': palette.content,
+            '--tw-prose-body': colors.black,
+            '--tw-prose-headings': colors.black,
+            '--tw-prose-lead': colors.gray[700],
+            '--tw-prose-links': colors.black,
+            '--tw-prose-bold': colors.black,
+            '--tw-prose-counters': colors.gray[600],
+            '--tw-prose-bullets': colors.gray[400],
+            '--tw-prose-hr': colors.gray[300],
+            '--tw-prose-quotes': colors.black,
+            '--tw-prose-quote-borders': colors.gray[300],
+            '--tw-prose-captions': colors.gray[600],
+            '--tw-prose-code': colors.black,
+            '--tw-prose-pre-code': colors.gray[300],
+            '--tw-prose-pre-bg': colors.gray[800],
+            '--tw-prose-th-borders': colors.gray[400],
+            '--tw-prose-td-borders': colors.gray[300],
+            '--tw-prose-invert-body': colors.gray[400],
+            '--tw-prose-invert-headings': colors.white,
+            '--tw-prose-invert-lead': colors.gray[500],
+            '--tw-prose-invert-links': colors.white,
+            '--tw-prose-invert-bold': colors.white,
+            '--tw-prose-invert-counters': colors.gray[500],
+            '--tw-prose-invert-bullets': colors.gray[700],
+            '--tw-prose-invert-hr': colors.black,
+            '--tw-prose-invert-quotes': colors.gray[200],
+            '--tw-prose-invert-quote-borders': colors.black,
+            '--tw-prose-invert-captions': colors.gray[500],
+            '--tw-prose-invert-code': colors.white,
+            '--tw-prose-invert-pre-code': colors.gray[400],
+            '--tw-prose-invert-pre-bg': 'rgb(0 0 0 / 50%)',
+            '--tw-prose-invert-th-borders': colors.gray[700],
+            '--tw-prose-invert-td-borders': colors.black,
           },
         },
       },

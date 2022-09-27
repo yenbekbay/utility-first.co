@@ -1,13 +1,11 @@
 import Layout from 'components/Layout'
-import type {Project} from 'contentlayer/generated'
 import {allProjects} from 'contentlayer/generated'
-import {format, parseISO} from 'date-fns'
-import type {GetStaticPropsContext} from 'next'
+import type {GetStaticPropsContext, InferGetStaticPropsType} from 'next'
+import {useMDXComponent} from 'next-contentlayer/hooks'
 import Head from 'next/head'
-import Link from 'next/link'
 
 export function getStaticPaths() {
-  const paths = allProjects.map((project) => project.url)
+  const paths = allProjects.map((p) => `/work/${p.slug}`)
   return {
     paths,
     fallback: false,
@@ -15,31 +13,33 @@ export function getStaticPaths() {
 }
 
 export function getStaticProps({params}: GetStaticPropsContext) {
+  // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
   const project = allProjects.find(
     (project) => project._raw.flattenedPath === params?.slug,
-  )
+  )!
   return {
-    props: {
-      project,
-    },
+    props: {project},
   }
 }
 
-export default function ProjectLayout({project}: {project: Project}) {
+export default function ProjectLayout({
+  project,
+}: InferGetStaticPropsType<typeof getStaticProps>) {
+  const MDXContent = useMDXComponent(project.body.code)
   return (
     <Layout>
       <Head>
-        <title>{project.title}</title>
+        <title>{project.title} | Utility First</title>
       </Head>
 
-      <article className="prose max-w-md leading-tight md:prose-2xl md:leading-tight">
+      <article className="prose max-w-md leading-tight">
         <h1>{project.title}</h1>
 
-        <time dateTime={project.date} className="text-sm text-gray-500">
-          {format(parseISO(project.date), 'LLLL d, yyyy')}
+        <time dateTime={project.year} className="text-sm text-gray-500">
+          {project.year}
         </time>
 
-        <div dangerouslySetInnerHTML={{__html: project.body.html}} />
+        <MDXContent />
       </article>
     </Layout>
   )

@@ -31,9 +31,7 @@ export default function ProjectLayout({
       </Head>
 
       <article className="prose">
-        <time dateTime={project.year} className="text-sm text-gray-500">
-          {project.year}
-        </time>
+        <span className="text-sm text-gray-500">{project.year}</span>
 
         <h1>{project.title}</h1>
 

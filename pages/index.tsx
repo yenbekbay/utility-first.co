@@ -1,4 +1,5 @@
 import Layout from 'components/Layout'
+import {UnderConstruction} from 'components/UnderConstruction'
 import {allProjects} from 'contentlayer/generated'
 import type {InferGetStaticPropsType} from 'next'
 import Image from 'next/future/image'
@@ -29,6 +30,8 @@ export default function Index({
   return (
     <Layout>
       <article className="prose max-w-3xl">
+        <UnderConstruction />
+
         <h1>
           Utility First is a <em>design-driven</em> digital product studio based
           in Almaty, Kazakhstan.
@@ -46,9 +49,7 @@ export default function Index({
                 className="mb-2 max-w-full rounded-lg"
               />
 
-              <time dateTime={p.year} className="block text-xs text-gray-500">
-                {p.year}
-              </time>
+              <span className="block text-xs text-gray-500">{p.year}</span>
 
               <span className="block text-lg leading-tight group-hover:underline group-active:underline">
                 {p.title}

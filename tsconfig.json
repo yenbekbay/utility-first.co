@@ -16,7 +16,10 @@
     "incremental": true,
     "downlevelIteration": true,
     "noUnusedLocals": true,
-    "baseUrl": "."
+    "baseUrl": ".",
+    "paths": {
+      "contentlayer/generated": ["./.contentlayer/generated"]
+    }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
   "exclude": ["node_modules"]

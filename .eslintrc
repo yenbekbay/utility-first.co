@@ -17,7 +17,7 @@
     "object-shorthand": "warn",
     "prefer-const": "warn",
     "quotes": ["warn", "single", {"avoidEscape": true}],
-    "import/no-unresolved": "error",
+    "import/no-unresolved": ["error", {"ignore": ["contentlayer/.*"]}],
     "eslint-comments/disable-enable-pair": "off",
     "eslint-comments/no-unlimited-disable": "off",
     "eslint-comments/no-unused-disable": "warn",

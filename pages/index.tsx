@@ -1,17 +1,42 @@
-import useFontFaceObserver from 'use-font-face-observer'
+import Layout from 'components/Layout'
+import type {Project} from 'contentlayer/generated'
+import {allProjects} from 'contentlayer/generated'
+import {compareDesc, format, parseISO} from 'date-fns'
+import Link from 'next/link'
 
-export default function Index() {
-  const fontsLoaded = useFontFaceObserver([
-    {family: 'Lucette'},
-    {family: 'Dinish'},
-  ])
-  if (!fontsLoaded) {
-    return null
-  }
+export function getStaticProps() {
+  const projects = allProjects.sort((a, b) =>
+    compareDesc(new Date(a.date), new Date(b.date)),
+  )
+  return {props: {projects}}
+}
+
+export default function Index({projects}: {projects: Project[]}) {
   return (
-    <article className="prose-lg prose h-screen p-4 leading-normal prose-headings:font-display prose-headings:font-bold lg:prose-2xl">
-      <h1 className="mb-0 lowercase lg:mb-0">Utility First</h1>
-      <p>A digital product studio in Almaty, Kazakhstan. Coming soon.</p>
-    </article>
+    <Layout>
+      <article className="prose max-w-md leading-tight md:prose-2xl md:leading-tight">
+        <p>
+          Utility First is a{' '}
+          <span className="font-serif text-[1.1em] italic">design-driven</span>{' '}
+          digital product studio located in Almaty, Kazakhstan.
+        </p>
+      </article>
+
+      <div className="grid grid-cols-1 gap-2 py-8">
+        {projects.map((project, idx) => (
+          <div className="prose max-w-md leading-tight" key={idx}>
+            <time dateTime={project.date} className="text-xs text-gray-500">
+              {format(parseISO(project.date), 'LLLL d, yyyy')}
+            </time>
+
+            <Link
+              href={project.url}
+              className="block text-lg text-content no-underline hover:underline active:underline">
+              {project.title}
+            </Link>
+          </div>
+        ))}
+      </div>
+    </Layout>
   )
 }

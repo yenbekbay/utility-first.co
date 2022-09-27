@@ -3,28 +3,43 @@
 @import 'tailwindcss/utilities';
 
 @layer base {
+  @supports (font-variation-settings: normal) {
+    @font-face {
+      font-family: 'Manrope';
+      font-weight: 200 800;
+      font-style: normal;
+      src: url('/fonts/Manrope[wght].woff2') format('woff2');
+    }
+  }
+
+  @supports not (font-variation-settings: normal) {
+    @font-face {
+      font-family: 'Manrope';
+      font-weight: 400;
+      font-style: normal;
+      src: url('/fonts/Manrope-Regular.woff2') format('woff2');
+    }
+  }
+
   @font-face {
     font-family: 'Lucette';
     font-weight: 400;
     font-style: normal;
-    src: url('/fonts/Lucette-Regular.woff2') format('woff2'),
-      url('/fonts/Lucette-Regular.woff') format('woff');
+    src: url('/fonts/Lucette-Regular.woff2') format('woff2');
   }
 
   @font-face {
     font-family: 'Lucette';
     font-weight: 400;
     font-style: italic;
-    src: url('/fonts/Lucette-RegularItalic.woff2') format('woff2'),
-      url('/fonts/Lucette-RegularItalic.woff') format('woff');
+    src: url('/fonts/Lucette-RegularItalic.woff2') format('woff2');
   }
 
   @font-face {
     font-family: 'Dinish';
     font-weight: 700;
     font-style: normal;
-    src: url('/fonts/Dinish-Bold.woff2') format('woff2'),
-      url('/fonts/Dinish-Bold.woff') format('woff');
+    src: url('/fonts/Dinish-Bold.woff2') format('woff2');
   }
 }
 

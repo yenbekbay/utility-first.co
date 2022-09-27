@@ -40,3 +40,6 @@ yarn-error.log*
 
 # tailwind
 /__generated__/tailwind.css
+
+# contentlayer
+/.contentlayer

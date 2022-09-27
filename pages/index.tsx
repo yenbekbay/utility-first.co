@@ -28,10 +28,10 @@ export default function Index({
 }: InferGetStaticPropsType<typeof getStaticProps>) {
   return (
     <Layout>
-      <article className="prose">
+      <article className="prose max-w-3xl">
         <h1>
-          Utility First is a <em>design-driven</em> digital product studio
-          located in Almaty, Kazakhstan.
+          Utility First is a <em>design-driven</em> digital product studio based
+          in Almaty, Kazakhstan.
         </h1>
       </article>
 

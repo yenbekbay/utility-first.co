@@ -31,11 +31,11 @@ export default function ProjectLayout({
       </Head>
 
       <article className="prose">
-        <h1>{project.title}</h1>
-
         <time dateTime={project.year} className="text-sm text-gray-500">
           {project.year}
         </time>
+
+        <h1>{project.title}</h1>
 
         <MDXContent />
       </article>

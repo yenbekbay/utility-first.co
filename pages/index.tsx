@@ -27,7 +27,7 @@ export default function Index({
 }: InferGetStaticPropsType<typeof getStaticProps>) {
   return (
     <Layout>
-      <article className="prose">
+      <article className="prose max-w-[80ch]">
         <UnderConstruction />
 
         <h1>

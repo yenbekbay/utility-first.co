@@ -44,16 +44,16 @@
 }
 
 @layer components {
-  .prose {
-    max-width: 80ch;
-  }
-
   .prose,
   .prose-base,
   .prose-lg,
   .prose-xl,
   .prose-2xl {
     @apply leading-tight;
+  }
+
+  .prose :where(a):not(:where([class~='not-prose'] *)):hover {
+    @apply decoration-primary;
   }
 
   .prose :where(h1):not(:where([class~='not-prose'] *)) {

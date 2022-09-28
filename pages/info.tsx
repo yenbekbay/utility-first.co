@@ -7,6 +7,8 @@ export default function Info() {
       <article className="prose">
         <UnderConstruction />
 
+        <h1>Contact</h1>
+
         <p>
           If you’re interested in any form of collaboration, please send us an
           email and we’ll get back shortly.

@@ -33,7 +33,7 @@ function ErrorFallback({error}: FallbackProps) {
       <article className="prose">
         <h1>Something went wrong!</h1>
 
-        <pre className="items-start whitespace-pre-line rounded-md border border-red-600 bg-background font-mono text-red-600">
+        <pre className="items-start whitespace-pre-line rounded-lg border border-red-600 bg-background font-mono text-red-600">
           {error.message}
         </pre>
       </article>

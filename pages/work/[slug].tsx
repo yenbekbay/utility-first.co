@@ -31,10 +31,8 @@ export default function ProjectLayout({
       </Head>
 
       <article className="prose">
-        <span className="text-sm text-gray-500">{project.year}</span>
-
+        <small>{project.year}</small>
         <h1>{project.title}</h1>
-
         <MDXContent />
       </article>
     </Layout>

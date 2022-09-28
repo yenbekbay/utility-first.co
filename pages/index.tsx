@@ -29,7 +29,7 @@ export default function Index({
 }: InferGetStaticPropsType<typeof getStaticProps>) {
   return (
     <Layout>
-      <article className="prose max-w-3xl">
+      <article className="prose">
         <UnderConstruction />
 
         <h1>
@@ -38,10 +38,10 @@ export default function Index({
         </h1>
       </article>
 
-      <div className="grid grid-cols-1 gap-2 py-8 md:grid-cols-2">
+      <section className="grid grid-cols-1 gap-8 py-8 md:grid-cols-2 md:gap-2">
         {projects.map((p) => (
           <Link key={p.slug} href={`/work/${p.slug}`} className="group">
-            <div className="prose">
+            <div className="prose prose-no-spacing">
               <Image
                 src={p.coverImageSrc}
                 alt={`Thumbnail for ${p.title}`}
@@ -49,15 +49,19 @@ export default function Index({
                 className="mb-2 max-w-full rounded-lg"
               />
 
-              <span className="block text-xs text-gray-500">{p.year}</span>
+              <div>
+                <small className="text-gray-500">{p.year}</small>
+              </div>
 
-              <span className="block text-lg leading-tight group-hover:underline group-active:underline">
-                {p.title}
-              </span>
+              <div>
+                <span className="text-lg leading-tight group-hover:underline group-active:underline">
+                  {p.title}
+                </span>
+              </div>
             </div>
           </Link>
         ))}
-      </div>
+      </section>
     </Layout>
   )
 }

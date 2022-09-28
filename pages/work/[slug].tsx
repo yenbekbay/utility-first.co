@@ -1,5 +1,6 @@
 import Layout from 'components/Layout'
 import {allProjects} from 'contentlayer/generated'
+import {EnhancedImage} from 'lib/components/EnhancedImage'
 import type {GetStaticPropsContext, InferGetStaticPropsType} from 'next'
 import {useMDXComponent} from 'next-contentlayer/hooks'
 import Head from 'next/head'
@@ -33,7 +34,7 @@ export default function ProjectLayout({
       <article className="prose">
         <small>{project.year}</small>
         <h1>{project.title}</h1>
-        <MDXContent />
+        <MDXContent components={{EnhancedImage}} />
       </article>
     </Layout>
   )

@@ -15,7 +15,7 @@ export default function Layout({children}: {children: React.ReactNode}) {
   }
   return (
     <>
-      <header className="sticky top-0 grid grid-cols-1 items-center gap-1 bg-background p-2 md:grid-cols-2 md:gap-2">
+      <header className="sticky top-0 z-10 grid grid-cols-1 items-center gap-1 bg-background p-2 md:grid-cols-2 md:gap-2">
         <div>
           <Link
             href="/"

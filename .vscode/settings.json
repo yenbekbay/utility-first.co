@@ -33,6 +33,7 @@
   "files.associations": {
     "*.css": "tailwindcss"
   },
+  "javascript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBraces": false,
   "js/ts.implicitProjectConfig.checkJs": true,
   "typescript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBraces": false,
   "typescript.tsdk": "./node_modules/typescript/lib"

@@ -7,6 +7,7 @@ const palette = {
   primary: '#0B64FE',
   secondary: '#5B5B5B',
   content: '#232323',
+  muted: '#777777',
   background: '#E7E7E7',
   mercury: {
     50: '#FFFFFF',

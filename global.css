@@ -65,7 +65,7 @@
   }
 
   .prose :where(small):not(:where([class~='not-prose'] *)) {
-    @apply text-gray-500;
+    @apply text-muted;
   }
 }
 

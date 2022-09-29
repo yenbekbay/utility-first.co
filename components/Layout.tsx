@@ -34,7 +34,7 @@ export default function Layout({children}: {children: React.ReactNode}) {
                 <NavigationMenu.Link asChild>
                   <ActiveLink
                     href={l.href}
-                    className="text-gray-500 hover:text-content hover:underline active:underline link-exact-active:text-content">
+                    className="text-muted hover:text-content hover:underline active:underline link-exact-active:text-content">
                     {l.label}
                   </ActiveLink>
                 </NavigationMenu.Link>
@@ -48,7 +48,7 @@ export default function Layout({children}: {children: React.ReactNode}) {
 
       <footer className="prose p-2">
         <p className="mb-0">©2022</p>
-        <p className="mt-0 text-gray-500">All rights reserved</p>
+        <p className="mt-0 text-muted">All rights reserved</p>
       </footer>
     </>
   )

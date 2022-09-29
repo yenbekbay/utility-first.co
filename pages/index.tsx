@@ -48,7 +48,7 @@ export default function Index({
               />
 
               <div>
-                <small className="text-gray-500">{p.year}</small>
+                <small className="text-muted">{p.year}</small>
               </div>
 
               <div>

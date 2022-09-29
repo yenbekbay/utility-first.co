@@ -31,9 +31,28 @@ export default function ProjectLayout({
         <title>{project.title} | Utility First</title>
       </Head>
 
-      <article className="prose">
-        <small>{project.year}</small>
+      <article className="prose prose-td:pr-12 prose-td:align-top prose-td:leading-normal prose-td:text-muted first:prose-td:text-content">
         <h1>{project.title}</h1>
+        <table>
+          <tr>
+            <td>Year</td>
+            <td>{project.year}</td>
+          </tr>
+          <tr>
+            <td>Role</td>
+            <td>{project.role.join(', ')}</td>
+          </tr>
+          {project.website && (
+            <tr>
+              <td>Website</td>
+              <td>
+                <a href={project.website} target="_blank" rel="noreferrer">
+                  {project.website.replace(/^https?:\/\//, '')}
+                </a>
+              </td>
+            </tr>
+          )}
+        </table>
         <MDXContent components={{EnhancedImage}} />
       </article>
     </Layout>

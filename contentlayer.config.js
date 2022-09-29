@@ -11,17 +11,22 @@ export const Project = defineDocumentType(() => ({
   fields: {
     title: {
       type: 'string',
-      description: 'The title of the project',
       required: true,
     },
     year: {
       type: 'string',
-      description: 'The year of the project',
       required: true,
+    },
+    role: {
+      type: 'list',
+      of: {type: 'string'},
+      required: true,
+    },
+    website: {
+      type: 'string',
     },
     coverImageSrc: {
       type: 'string',
-      description: 'The path to the cover image of the project',
       required: true,
     },
   },

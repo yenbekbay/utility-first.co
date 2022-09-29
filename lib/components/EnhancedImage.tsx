@@ -43,7 +43,7 @@ export function EnhancedImage({
           ),
         )}
         {/* eslint-disable-next-line jsx-a11y/alt-text */}
-        <Image className="my-0" {...restProps} />
+        <Image {...restProps} />
       </div>
 
       {!!title && <figcaption>{title}</figcaption>}

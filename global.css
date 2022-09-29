@@ -77,7 +77,7 @@
     @apply text-sm text-muted md:text-[0.5rem];
   }
 
-  .prose figure image,
+  .prose figure img,
   .prose figure video {
     @apply my-0;
   }

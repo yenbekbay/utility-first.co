@@ -1,6 +1,7 @@
 import {defineDocumentType, makeSource} from 'contentlayer/source-files'
 import {fromJs} from 'esast-util-from-js'
 import {stringify} from 'javascript-stringify'
+import queryString from 'node:querystring'
 import {getPlaiceholder} from 'plaiceholder'
 import {visit} from 'unist-util-visit'
 
@@ -73,6 +74,22 @@ export default makeSource({
               })
               const srcCode = `(${stringify(src)})`
               const svgCode = `(${stringify(svg)})`
+              const params = Object.entries(
+                queryString.parse(imageNode.title ?? ''),
+              )
+              const attributes = {
+                alt: imageNode.alt,
+                title: imageNode.alt,
+              }
+              if (params.length === 1 && params[0][0] === imageNode.title) {
+                attributes.title = params[0][0]
+              } else {
+                for (const [key, value] of params) {
+                  attributes[key] = Array.isArray(value)
+                    ? value.join(' ')
+                    : value
+                }
+              }
               /** @type {import('mdast-util-mdx-jsx').MdxJsxFlowElement} */
               const newNode = {
                 type: 'mdxJsxFlowElement',
@@ -101,22 +118,15 @@ export default makeSource({
                       },
                     },
                   }),
-                  imageNode.alt != null &&
-                    /** @type {import('mdast-util-mdx-jsx').MdxJsxAttribute} */ ({
-                      type: 'mdxJsxAttribute',
-                      name: 'alt',
-                      value: imageNode.alt,
-                    }),
-                  imageNode.title != null &&
-                    /** @type {import('mdast-util-mdx-jsx').MdxJsxAttribute} */ ({
-                      type: 'mdxJsxAttribute',
-                      name: 'title',
-                      value: imageNode.title,
-                    }),
-                ].filter(
-                  /** @type {<T>(a: T | false) => a is T} */
-                  (a) => a !== false,
-                ),
+                  ...Object.entries(attributes).map(
+                    ([name, value]) =>
+                      /** @type {import('mdast-util-mdx-jsx').MdxJsxAttribute} */ ({
+                        type: 'mdxJsxAttribute',
+                        name,
+                        value,
+                      }),
+                  ),
+                ],
                 children: [],
                 data: {
                   _mdxExplicitJsx: true,

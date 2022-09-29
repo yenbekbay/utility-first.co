@@ -2,21 +2,25 @@ import type {ImageProps} from 'next/future/image'
 import Image from 'next/future/image'
 import type {TGetSVGReturn} from 'plaiceholder/dist/svg'
 import React from 'react'
-import {twMerge} from 'tailwind-merge'
 
 export interface EnhancedImageProps extends ImageProps {
   svg: TGetSVGReturn
+  bleed?: boolean | string
 }
 
 export function EnhancedImage({
   svg,
+  bleed,
   className,
   style,
   title,
   ...restProps
 }: EnhancedImageProps) {
   return (
-    <figure className={twMerge('max-w-full', className)} style={style}>
+    <figure
+      className={className}
+      style={style}
+      {...(bleed != null && {'data-bleed': ''})}>
       <div className="relative overflow-hidden">
         {React.createElement(
           svg[0],

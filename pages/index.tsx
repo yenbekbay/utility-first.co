@@ -6,16 +6,26 @@ import type {InferGetStaticPropsType} from 'next'
 import Link from 'next/link'
 import {getPlaiceholder} from 'plaiceholder'
 
+const SORT_ORDER = ['alka', 'heritage-novel', 'tabs']
+
 export async function getStaticProps() {
   const projects = await Promise.all(
-    allProjects.map(async (p) => {
-      const {img: src, svg} = await getPlaiceholder(p.coverImageSrc, {size: 8})
-      return {
-        ...p,
-        coverImageSrc: src,
-        coverImageSvg: svg,
-      }
-    }),
+    allProjects
+      .sort(
+        (a, b) =>
+          (SORT_ORDER.indexOf(a.slug) ?? Number.POSITIVE_INFINITY) -
+          (SORT_ORDER.indexOf(b.slug) ?? Number.POSITIVE_INFINITY),
+      )
+      .map(async (p) => {
+        const {img: src, svg} = await getPlaiceholder(p.coverImageSrc, {
+          size: 8,
+        })
+        return {
+          ...p,
+          coverImageSrc: src,
+          coverImageSvg: svg,
+        }
+      }),
   )
   return {
     props: {projects},

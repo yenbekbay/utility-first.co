@@ -67,6 +67,11 @@
   .prose :where(small):not(:where([class~='not-prose'] *)) {
     @apply text-muted;
   }
+
+  .prose :where(figure[data-bleed]):not(:where([class~='not-prose'] *)) {
+    margin-right: calc((100% - 100vw) + 1rem);
+    max-width: calc(100vw - 1rem);
+  }
 }
 
 @layer utilities {

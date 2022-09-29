@@ -10,11 +10,17 @@ const SORT_ORDER = ['alka', 'heritage-novel', 'tabs']
 export async function getStaticProps() {
   const projects = await Promise.all(
     allProjects
-      .sort(
-        (a, b) =>
-          (SORT_ORDER.indexOf(a.slug) ?? Number.POSITIVE_INFINITY) -
-          (SORT_ORDER.indexOf(b.slug) ?? Number.POSITIVE_INFINITY),
-      )
+      .sort((a, b) => {
+        let aIndex = SORT_ORDER.indexOf(a.slug)
+        let bIndex = SORT_ORDER.indexOf(b.slug)
+        if (aIndex === -1) {
+          aIndex = Number.POSITIVE_INFINITY
+        }
+        if (bIndex === -1) {
+          bIndex = Number.POSITIVE_INFINITY
+        }
+        return aIndex - bIndex
+      })
       .map(async (p) => {
         const {img: src, svg} = await getPlaiceholder(p.coverImageSrc, {
           size: 8,

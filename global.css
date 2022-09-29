@@ -72,6 +72,15 @@
     margin-right: calc((100% - 100vw) + 1rem);
     max-width: calc(100vw - 1rem);
   }
+
+  .prose :where(figcaption):not(:where([class~='not-prose'] *)) {
+    @apply text-sm text-muted md:text-[0.5rem];
+  }
+
+  .prose figure image,
+  .prose figure video {
+    @apply my-0;
+  }
 }
 
 @layer utilities {

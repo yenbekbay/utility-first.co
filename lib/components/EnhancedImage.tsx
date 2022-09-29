@@ -46,11 +46,7 @@ export function EnhancedImage({
         <Image className="my-0" {...restProps} />
       </div>
 
-      {!!title && (
-        <figcaption className="text-sm text-muted md:text-[0.5rem]">
-          {title}
-        </figcaption>
-      )}
+      {!!title && <figcaption>{title}</figcaption>}
     </figure>
   )
 }

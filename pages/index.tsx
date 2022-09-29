@@ -1,5 +1,4 @@
 import Layout from 'components/Layout'
-import {UnderConstruction} from 'components/UnderConstruction'
 import {allProjects} from 'contentlayer/generated'
 import {EnhancedImage} from 'lib/components/EnhancedImage'
 import type {InferGetStaticPropsType} from 'next'
@@ -38,15 +37,13 @@ export default function Index({
   return (
     <Layout>
       <article className="prose max-w-[80ch]">
-        <UnderConstruction />
-
         <h1>
-          Utility First is a <em>design-driven</em> digital product studio based
-          in Almaty, Kazakhstan.
+          Utility First is a <em>design-driven</em> technology studio based in
+          Almaty, Kazakhstan.
         </h1>
       </article>
 
-      <section className="grid grid-cols-1 gap-8 py-8 md:grid-cols-2 md:gap-2">
+      <section className="grid grid-cols-1 gap-8 py-8 md:grid-cols-2 md:gap-[2rem_0.5rem]">
         {projects.map((p) => (
           <Link key={p.slug} href={`/work/${p.slug}`} className="group">
             <div className="prose prose-no-spacing">

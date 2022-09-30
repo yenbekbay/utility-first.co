@@ -6,7 +6,14 @@ import Image from 'next/future/image'
 import Link from 'next/link'
 import {getPlaiceholder} from 'plaiceholder'
 
-const SORT_ORDER = ['alka', 'heritage-novel', 'tabs']
+const SORT_ORDER = [
+  'alka',
+  'heritage-novel',
+  'tabs',
+  'okauto',
+  'lavka',
+  'seansy',
+]
 
 export async function getStaticProps() {
   const avatarAyanYenbekbay = await getPlaiceholder(

@@ -61,14 +61,16 @@ export default function Index({
 
         <p>
           Based in Almaty, Kazakhstan and founded by{' '}
-          <Image
-            src={avatars.ayanYenbekbay}
-            alt="Ayan Yenbekbay"
-            className="my-0 inline-block h-[1em] w-auto translate-y-[-0.1em] rounded-sm"
-          />{' '}
-          Ayan Yenbekbay, we work collaboratively with clients across the globe
-          to identify their business goals and launch simple, intuitive
-          experiences.
+          <span className="whitespace-nowrap">
+            <Image
+              src={avatars.ayanYenbekbay}
+              alt="Ayan Yenbekbay"
+              className="my-0 inline-block h-[1em] w-auto translate-y-[-0.1em] rounded-sm"
+            />{' '}
+            Ayan Yenbekbay
+          </span>
+          , we work collaboratively with clients across the globe to identify
+          their business goals and launch simple, intuitive experiences.
         </p>
       </article>
 

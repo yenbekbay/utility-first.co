@@ -46,44 +46,47 @@ export default function Layout({children}: {children: React.ReactNode}) {
 
       <main className="px-2 py-16">{children}</main>
 
-      <footer className="prose p-2 prose-td:py-2 prose-td:pr-12 prose-td:align-top prose-td:leading-normal prose-td:text-muted first:prose-td:text-content">
+      <footer className="prose p-2">
         <table>
-          <tr>
-            <td>Credits</td>
-            <td>
-              Type set in Mikhail Sharanda’s{' '}
-              <a
-                href="https://www.gent.media/manrope"
-                target="_blank"
-                rel="noreferrer">
-                Manrope
-              </a>{' '}
-              and Alice Savoie’s{' '}
-              <a
-                href="https://frenchtype.com/Lucette"
-                target="_blank"
-                rel="noreferrer">
-                Lucette
-              </a>
-              .<br />
-              Hosted on{' '}
-              <a href="https://vercel.com/" target="_blank" rel="noreferrer">
-                Vercel
-              </a>
-              .
-            </td>
-          </tr>
-          <tr>
-            <td>Follow us</td>
-            <td>
-              <a
-                href="https://twitter.com/utility-first"
-                target="_blank"
-                rel="noreferrer">
-                Twitter
-              </a>
-            </td>
-          </tr>
+          <tbody>
+            <tr>
+              <td>Credits</td>
+              <td>
+                Type set in Mikhail Sharanda’s{' '}
+                <a
+                  href="https://www.gent.media/manrope"
+                  target="_blank"
+                  rel="noreferrer">
+                  Manrope
+                </a>{' '}
+                and Alice Savoie’s{' '}
+                <a
+                  href="https://frenchtype.com/Lucette"
+                  target="_blank"
+                  rel="noreferrer">
+                  Lucette
+                </a>
+                .<br />
+                Hosted on{' '}
+                <a href="https://vercel.com/" target="_blank" rel="noreferrer">
+                  Vercel
+                </a>
+                .
+              </td>
+            </tr>
+
+            <tr>
+              <td className="whitespace-nowrap">Follow us</td>
+              <td>
+                <a
+                  href="https://twitter.com/utility-first"
+                  target="_blank"
+                  rel="noreferrer">
+                  Twitter
+                </a>
+              </td>
+            </tr>
+          </tbody>
         </table>
 
         <p className="mb-0">©2022</p>

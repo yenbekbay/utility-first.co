@@ -52,6 +52,10 @@
     @apply leading-tight;
   }
 
+  .prose {
+    @apply prose-td:pr-12 prose-td:align-top prose-td:leading-normal prose-td:text-muted first:prose-td:text-content;
+  }
+
   .prose :where(a):not(:where([class~='not-prose'] *)):hover {
     @apply decoration-primary;
   }
@@ -80,6 +84,10 @@
   .prose figure img,
   .prose figure video {
     @apply my-0;
+  }
+
+  .prose tbody tr {
+    @apply border-none;
   }
 }
 

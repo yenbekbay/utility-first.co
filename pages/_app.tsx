@@ -11,7 +11,7 @@ export default function App({Component, pageProps}: AppProps) {
       <Head>
         <title>Utility First</title>
         <meta
-          content="Utility First is a design-driven technology studio in Almaty, Kazakhstan."
+          content="Utility First is a design-driven technology company that helps start-ups build great products."
           name="description"
         />
         <meta name="viewport" content="width=device-width,initial-scale=1" />

@@ -2,12 +2,19 @@ import Layout from 'components/Layout'
 import {allProjects} from 'contentlayer/generated'
 import {EnhancedImage} from 'lib/components/EnhancedImage'
 import type {InferGetStaticPropsType} from 'next'
+import Image from 'next/future/image'
 import Link from 'next/link'
 import {getPlaiceholder} from 'plaiceholder'
 
 const SORT_ORDER = ['alka', 'heritage-novel', 'tabs']
 
 export async function getStaticProps() {
+  const avatarAyanYenbekbay = await getPlaiceholder(
+    '/images/avatar-ayan-yenbekbay.jpeg',
+  )
+  const avatars = {
+    ayanYenbekbay: avatarAyanYenbekbay.img,
+  }
   const projects = await Promise.all(
     allProjects
       .sort((a, b) => {
@@ -33,20 +40,36 @@ export async function getStaticProps() {
       }),
   )
   return {
-    props: {projects},
+    props: {
+      avatars,
+      projects,
+    },
   }
 }
 
 export default function Index({
+  avatars,
   projects,
 }: InferGetStaticPropsType<typeof getStaticProps>) {
   return (
     <Layout>
       <article className="prose max-w-[80ch]">
         <h1>
-          Utility First is a <em>design-driven</em> technology studio based in
-          Almaty, Kazakhstan.
+          Utility First is a <em>design-driven</em> technology company that
+          helps start-ups build great products.
         </h1>
+
+        <p>
+          Based in Almaty, Kazakhstan and founded by{' '}
+          <Image
+            src={avatars.ayanYenbekbay}
+            alt="Ayan Yenbekbay"
+            className="my-0 inline-block h-[1em] w-auto translate-y-[-0.1em] rounded-sm"
+          />{' '}
+          Ayan Yenbekbay, we work collaboratively with clients across the globe
+          to identify their business goals and launch simple, intuitive
+          experiences.
+        </p>
       </article>
 
       <section className="grid grid-cols-1 gap-8 py-8 md:grid-cols-2 md:gap-[2rem_0.5rem]">

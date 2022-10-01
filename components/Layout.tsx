@@ -46,7 +46,7 @@ export default function Layout({children}: {children: React.ReactNode}) {
 
       <main className="px-2 py-16">{children}</main>
 
-      <footer className="prose p-2">
+      <footer className="prose p-2 prose-td:py-1">
         <table>
           <tbody>
             <tr>

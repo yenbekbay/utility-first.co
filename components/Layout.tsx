@@ -79,10 +79,17 @@ export default function Layout({children}: {children: React.ReactNode}) {
               <td className="whitespace-nowrap">Follow us</td>
               <td>
                 <a
-                  href="https://twitter.com/utility-first"
+                  href="https://twitter.com/utilityfirst_co"
                   target="_blank"
                   rel="noreferrer">
                   Twitter
+                </a>
+                <br />
+                <a
+                  href="https://github.com/utility-first"
+                  target="_blank"
+                  rel="noreferrer">
+                  GitHub
                 </a>
               </td>
             </tr>

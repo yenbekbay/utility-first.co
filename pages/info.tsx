@@ -29,8 +29,8 @@ export default function Info() {
           company is at a different stage when they come to us, and so we work
           with you to create a plan that will help you achieve your goals. We
           believe that the best way to solve problems is to actually work on
-          them, not waste time with expensive exercises and inflexible
-          processes.
+          them, not waste time on unproductive routines and corporate
+          bureaucracy.
         </p>
 
         <h2>Contact</h2>

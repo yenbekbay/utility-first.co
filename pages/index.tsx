@@ -8,8 +8,8 @@ import {getPlaiceholder} from 'plaiceholder'
 
 const SORT_ORDER = [
   'alka',
-  'heritage-novel',
   'tabs',
+  'heritage-novel',
   'okauto',
   'lavka',
   'seansy',

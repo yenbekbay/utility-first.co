@@ -59,9 +59,9 @@ export default function Layout({children}: {children: React.ReactNode}) {
                   rel="noreferrer">
                   Manrope
                 </a>{' '}
-                and Alice Savoie’s{' '}
+                and Yann Linguinou’s{' '}
                 <a
-                  href="https://frenchtype.com/Lucette"
+                  href="https://yannlinguinou.com/LUCETTE-1"
                   target="_blank"
                   rel="noreferrer">
                   Lucette

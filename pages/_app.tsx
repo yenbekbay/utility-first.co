@@ -2,8 +2,8 @@ import '__generated__/tailwind.css'
 import Layout from 'components/Layout'
 import type {AppProps} from 'next/app'
 import Head from 'next/head'
-import {ErrorBoundary} from 'react-error-boundary'
 import type {FallbackProps} from 'react-error-boundary'
+import {ErrorBoundary} from 'react-error-boundary'
 
 export default function App({Component, pageProps}: AppProps) {
   return (

@@ -45,6 +45,7 @@
     "@types/unist": "2.0.6",
     "@typescript-eslint/eslint-plugin": "5.38.0",
     "@typescript-eslint/parser": "5.38.0",
+    "date-fns": "2.29.3",
     "esast-util-from-js": "1.1.0",
     "esbuild": "0.15.9",
     "eslint": "8.24.0",

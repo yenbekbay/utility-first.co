@@ -1,4 +1,5 @@
 import * as NavigationMenu from '@radix-ui/react-navigation-menu'
+import {intlFormat} from 'date-fns'
 import {ActiveLink} from 'lib/components/ActiveLink'
 import Link from 'next/link'
 import React from 'react'
@@ -76,6 +77,13 @@ export default function Layout({children}: {children: React.ReactNode}) {
             </tr>
 
             <tr>
+              <td className="whitespace-nowrap">Local time</td>
+              <td>
+                <LocalTime />
+              </td>
+            </tr>
+
+            <tr>
               <td className="whitespace-nowrap">Follow us</td>
               <td>
                 <a
@@ -100,5 +108,24 @@ export default function Layout({children}: {children: React.ReactNode}) {
         <p className="mt-0 text-muted">All rights reserved</p>
       </footer>
     </>
+  )
+}
+
+function LocalTime() {
+  const [time, setTime] = React.useState(Date.now())
+  React.useEffect(() => {
+    const interval = setInterval(() => setTime(Date.now()), 1000)
+    return () => clearInterval(interval)
+  }, [])
+  return (
+    <span>
+      ALA{' '}
+      {intlFormat(time, {
+        hour: '2-digit',
+        minute: '2-digit',
+        hour12: false,
+        timeZone: 'Asia/Almaty',
+      })}
+    </span>
   )
 }

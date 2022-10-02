@@ -60,7 +60,7 @@ export default function Index({
 }: InferGetStaticPropsType<typeof getStaticProps>) {
   return (
     <Layout>
-      <div className="prose-sm prose prose-no-spacing max-w-[40ch] space-y-1 leading-none">
+      <div className="prose-sm prose prose-no-spacing space-y-1 leading-none">
         <p>
           <strong className="text-[70%]">Availability</strong>
         </p>
@@ -79,52 +79,54 @@ export default function Index({
         </p>
       </div>
 
-      <article className="prose max-w-[80ch] py-16">
-        <h1>
-          Utility First is a{' '}
-          <em className="whitespace-nowrap">design-driven</em> technology
-          company that helps start-ups build great products.
-        </h1>
+      <div className="space-y-8 py-16">
+        <article className="prose max-w-[80ch]">
+          <h1>
+            Utility First is a{' '}
+            <em className="whitespace-nowrap">design-driven</em> technology
+            company that helps start-ups build great products.
+          </h1>
 
-        <p>
-          Based in Almaty, Kazakhstan and founded by{' '}
-          <span className="whitespace-nowrap">
-            <Image
-              src={avatars.ayanYenbekbay}
-              alt="Ayan Yenbekbay"
-              className="my-0 inline-block h-[1em] w-auto translate-y-[-0.1em] rounded-sm"
-            />{' '}
-            Ayan Yenbekbay
-          </span>
-          , we work collaboratively with clients across the globe to identify
-          their business goals and launch simple, intuitive experiences.
-        </p>
-      </article>
+          <p>
+            Based in Almaty, Kazakhstan and founded by{' '}
+            <span className="whitespace-nowrap">
+              <Image
+                src={avatars.ayanYenbekbay}
+                alt="Ayan Yenbekbay"
+                className="my-0 inline-block h-[1em] w-auto translate-y-[-0.1em] rounded-sm"
+              />{' '}
+              Ayan Yenbekbay
+            </span>
+            , we work collaboratively with clients across the globe to identify
+            their business goals and launch simple, intuitive experiences.
+          </p>
+        </article>
 
-      <section className="grid grid-cols-1 gap-8 py-8 md:grid-cols-2 md:gap-[2rem_0.5rem]">
-        {projects.map((p) => (
-          <Link key={p.slug} href={`/work/${p.slug}`} className="group">
-            <div className="prose prose-no-spacing">
-              <EnhancedImage
-                src={p.coverImageSrc}
-                svg={p.coverImageSvg}
-                alt={`Thumbnail for ${p.title}`}
-                className="mb-2 rounded-lg"
-              />
+        <section className="grid grid-cols-1 gap-8 md:grid-cols-2 md:gap-[2rem_0.5rem]">
+          {projects.map((p) => (
+            <Link key={p.slug} href={`/work/${p.slug}`} className="group">
+              <div className="prose prose-no-spacing">
+                <EnhancedImage
+                  src={p.coverImageSrc}
+                  svg={p.coverImageSvg}
+                  alt={`Thumbnail for ${p.title}`}
+                  className="mb-2 rounded-lg"
+                />
 
-              <div>
-                <small className="text-muted">{p.year}</small>
+                <div>
+                  <small className="text-muted">{p.year}</small>
+                </div>
+
+                <div>
+                  <span className="text-lg leading-tight decoration-primary underline-offset-2 group-hover:underline group-active:underline md:underline-offset-4">
+                    {p.title}
+                  </span>
+                </div>
               </div>
-
-              <div>
-                <span className="text-lg leading-tight decoration-primary underline-offset-2 group-hover:underline group-active:underline md:underline-offset-4">
-                  {p.title}
-                </span>
-              </div>
-            </div>
-          </Link>
-        ))}
-      </section>
+            </Link>
+          ))}
+        </section>
+      </div>
     </Layout>
   )
 }

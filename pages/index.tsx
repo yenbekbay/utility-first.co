@@ -60,6 +60,25 @@ export default function Index({
 }: InferGetStaticPropsType<typeof getStaticProps>) {
   return (
     <Layout>
+      <div className="prose-sm prose prose-no-spacing max-w-[40ch] space-y-1 leading-none">
+        <p>
+          <strong className="text-[70%]">Availability</strong>
+        </p>
+
+        <p>
+          <small className="text-[70%]">
+            We’re open for business and new collaborations from{' '}
+            <span className="whitespace-nowrap">Nov 2022</span>.{' '}
+            <a
+              href="mailto:hello@utility-first.co"
+              className="whitespace-nowrap">
+              Get in touch
+            </a>
+            .
+          </small>
+        </p>
+      </div>
+
       <article className="prose max-w-[80ch] py-16">
         <h1>
           Utility First is a{' '}

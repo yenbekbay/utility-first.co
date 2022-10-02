@@ -126,7 +126,7 @@ function LocalTime() {
   }, [])
   return (
     <span>
-      ALA{' '}
+      ALMT{' '}
       {intlFormat(time, {
         hour: '2-digit',
         minute: '2-digit',

@@ -31,7 +31,7 @@ export default function ProjectLayout({
         <title>{project.title} | Utility First</title>
       </Head>
 
-      <article className="prose">
+      <article className="prose py-16">
         <h1>{project.title}</h1>
         <table>
           <tbody>

@@ -60,12 +60,10 @@ export default function Index({
 }: InferGetStaticPropsType<typeof getStaticProps>) {
   return (
     <Layout>
-      <div className="prose-sm prose prose-no-spacing space-y-1 leading-none">
+      <div className="prose-sm prose prose-no-spacing leading-none md:space-y-1">
         <p>
           <strong className="text-[70%]">Availability</strong>
-        </p>
-
-        <p>
+          <br />
           <small className="text-[70%]">
             We’re open for business and new collaborations from{' '}
             <span className="whitespace-nowrap">Nov 2022</span>.{' '}

@@ -56,11 +56,15 @@
     @apply prose-td:pr-12 prose-td:align-top prose-td:leading-normal prose-td:text-muted first:prose-td:text-content;
   }
 
+  .prose :where(a):not(:where([class~='not-prose'] *)) {
+    @apply decoration-muted underline-offset-4;
+  }
+
   .prose :where(a):not(:where([class~='not-prose'] *)):hover {
     @apply decoration-primary;
   }
 
-  .prose :where(h1):not(:where([class~='not-prose'] *)) {
+  .prose :where(h1, h2, h3, h4, h5, h6):not(:where([class~='not-prose'] *)) {
     @apply font-normal;
   }
 

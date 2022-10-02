@@ -60,7 +60,7 @@ export default function Index({
 }: InferGetStaticPropsType<typeof getStaticProps>) {
   return (
     <Layout>
-      <article className="prose max-w-[80ch]">
+      <article className="prose max-w-[80ch] py-16">
         <h1>
           Utility First is a{' '}
           <em className="whitespace-nowrap">design-driven</em> technology
@@ -98,7 +98,7 @@ export default function Index({
               </div>
 
               <div>
-                <span className="text-lg leading-tight group-hover:underline group-active:underline">
+                <span className="text-lg leading-tight decoration-primary underline-offset-4 group-hover:underline group-active:underline">
                   {p.title}
                 </span>
               </div>

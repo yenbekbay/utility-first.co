@@ -3,7 +3,7 @@ import Layout from 'components/Layout'
 export default function Info() {
   return (
     <Layout>
-      <article className="prose">
+      <article className="prose py-16">
         <h2>About us</h2>
 
         <p>
@@ -11,16 +11,15 @@ export default function Info() {
           strong understanding of user experience and product.
         </p>
 
-        <p>
-          What we can do:
-          <ul>
-            <li>Architect an MVP.</li>
-            <li>Consult on product discovery and strategy.</li>
-            <li>Craft a web-based digital experience.</li>
-            <li>Launch a mobile (iOS or Android) app.</li>
-            <li>Replatform your business logic and internal tools.</li>
-          </ul>
-        </p>
+        <p>What we can do:</p>
+
+        <ul>
+          <li>Architect an MVP.</li>
+          <li>Consult on product discovery and strategy.</li>
+          <li>Craft a web-based digital experience.</li>
+          <li>Launch a mobile (iOS or Android) app.</li>
+          <li>Replatform your business logic and internal tools.</li>
+        </ul>
 
         <h2>Our process</h2>
 
@@ -39,7 +38,7 @@ export default function Info() {
           Have a project you’d like to work on with us? Interested in joining
           the team? We’re always open to chat about anything. Please send us an
           email at{' '}
-          <a href="mailto:info@utility-first.co">info@utility-first.co</a>.
+          <a href="mailto:hello@utility-first.co">hello@utility-first.co</a>.
         </p>
       </article>
     </Layout>

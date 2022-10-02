@@ -35,7 +35,7 @@ export default function Layout({children}: {children: React.ReactNode}) {
                 <NavigationMenu.Link asChild>
                   <ActiveLink
                     href={l.href}
-                    className="text-muted decoration-primary underline-offset-4 hover:text-content hover:underline active:underline link-exact-active:text-content">
+                    className="text-muted decoration-primary underline-offset-2 hover:underline active:underline link-exact-active:text-content md:underline-offset-4">
                     {l.label}
                   </ActiveLink>
                 </NavigationMenu.Link>

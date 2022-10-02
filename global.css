@@ -57,7 +57,7 @@
   }
 
   .prose :where(a):not(:where([class~='not-prose'] *)) {
-    @apply decoration-muted underline-offset-4;
+    @apply decoration-muted underline-offset-2 md:underline-offset-4;
   }
 
   .prose :where(a):not(:where([class~='not-prose'] *)):hover {

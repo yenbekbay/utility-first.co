@@ -117,7 +117,7 @@ export default function Index({
               </div>
 
               <div>
-                <span className="text-lg leading-tight decoration-primary underline-offset-4 group-hover:underline group-active:underline">
+                <span className="text-lg leading-tight decoration-primary underline-offset-2 group-hover:underline group-active:underline md:underline-offset-4">
                   {p.title}
                 </span>
               </div>

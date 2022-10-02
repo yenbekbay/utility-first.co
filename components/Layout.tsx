@@ -51,6 +51,13 @@ export default function Layout({children}: {children: React.ReactNode}) {
         <table>
           <tbody>
             <tr>
+              <td className="whitespace-nowrap">Local time</td>
+              <td>
+                <LocalTime />
+              </td>
+            </tr>
+
+            <tr>
               <td>Credits</td>
               <td>
                 Type set in Mikhail Sharanda’s{' '}
@@ -77,20 +84,20 @@ export default function Layout({children}: {children: React.ReactNode}) {
             </tr>
 
             <tr>
-              <td className="whitespace-nowrap">Local time</td>
-              <td>
-                <LocalTime />
-              </td>
-            </tr>
-
-            <tr>
               <td className="whitespace-nowrap">Follow us</td>
               <td>
                 <a
-                  href="https://twitter.com/utilityfirst_co"
+                  href="https://twitter.com/utilfirst"
                   target="_blank"
                   rel="noreferrer">
                   Twitter
+                </a>
+                <br />
+                <a
+                  href="https://instagram.com/utilfirst"
+                  target="_blank"
+                  rel="noreferrer">
+                  Instagram
                 </a>
                 <br />
                 <a

@@ -62,8 +62,9 @@ export default function Index({
     <Layout>
       <article className="prose max-w-[80ch]">
         <h1>
-          Utility First is a <em>design-driven</em> technology company that
-          helps start-ups build great products.
+          Utility First is a{' '}
+          <em className="whitespace-nowrap">design-driven</em> technology
+          company that helps start-ups build great products.
         </h1>
 
         <p>

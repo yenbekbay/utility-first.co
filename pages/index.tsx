@@ -80,9 +80,8 @@ export default function Index({
       <div className="space-y-8 py-16">
         <article className="prose max-w-[80ch]">
           <h1>
-            Utility First is a{' '}
-            <em className="whitespace-nowrap">design-driven</em> technology
-            company that helps start-ups build great products.
+            Utility First is a technology company that helps start-ups build{' '}
+            <em className="whitespace-nowrap">delightful</em> digital products.
           </h1>
 
           <p>
@@ -95,7 +94,7 @@ export default function Index({
               />{' '}
               Ayan Yenbekbay
             </span>
-            , we work collaboratively with clients across the globe to identify
+            , we work collaboratively with clients around the globe to identify
             their business goals and launch simple, intuitive experiences.
           </p>
         </article>

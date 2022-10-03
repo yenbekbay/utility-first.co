@@ -40,8 +40,8 @@ export default function ProjectLayout({
               <td>{project.year}</td>
             </tr>
             <tr>
-              <td>Role</td>
-              <td>{project.role.join(', ')}</td>
+              <td>Scope</td>
+              <td>{project.scope.join(', ')}</td>
             </tr>
             {project.website && (
               <tr>

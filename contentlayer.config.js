@@ -18,7 +18,7 @@ export const Project = defineDocumentType(() => ({
       type: 'string',
       required: true,
     },
-    role: {
+    scope: {
       type: 'list',
       of: {type: 'string'},
       required: true,

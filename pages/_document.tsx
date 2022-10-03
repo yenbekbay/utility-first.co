@@ -38,7 +38,18 @@ export default function Document() {
       <body>
         <Main />
         <NextScript />
+        <GoatCounter />
       </body>
     </Html>
+  )
+}
+
+function GoatCounter() {
+  return (
+    <script
+      data-goatcounter="https://utility-first.goatcounter.com/count"
+      async
+      src="//gc.zgo.at/count.js"
+    />
   )
 }

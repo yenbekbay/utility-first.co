@@ -110,15 +110,13 @@ export default function Index({
                   className="mb-2 rounded-lg"
                 />
 
-                <div>
+                <span className="block leading-tight">
                   <small className="text-muted">{p.year}</small>
-                </div>
+                </span>
 
-                <div>
-                  <span className="text-lg leading-tight decoration-primary underline-offset-2 group-hover:underline group-active:underline md:underline-offset-4">
-                    {p.title}
-                  </span>
-                </div>
+                <span className="block text-lg leading-tight decoration-primary underline-offset-2 group-hover:underline group-active:underline md:underline-offset-4">
+                  {p.title}
+                </span>
               </div>
             </Link>
           ))}

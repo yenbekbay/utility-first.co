@@ -44,16 +44,12 @@
 }
 
 @layer components {
-  .prose,
-  .prose-base,
-  .prose-lg,
-  .prose-xl,
-  .prose-2xl {
-    @apply leading-tight;
+  .prose {
+    @apply leading-normal;
   }
 
   .prose {
-    @apply prose-td:pr-12 prose-td:align-top prose-td:leading-normal prose-td:text-muted first:prose-td:text-content;
+    @apply prose-td:pr-12 prose-td:py-0.5 prose-td:align-top prose-td:leading-normal prose-td:text-muted first:prose-td:text-content;
   }
 
   .prose :where(a):not(:where([class~='not-prose'] *)) {
@@ -69,7 +65,7 @@
   }
 
   .prose :where(em):not(:where([class~='not-prose'] *)) {
-    @apply font-serif text-[1.15em];
+    @apply font-serif text-[1.1em];
   }
 
   .prose :where(small):not(:where([class~='not-prose'] *)) {
@@ -88,10 +84,6 @@
   .prose figure img,
   .prose figure video {
     @apply my-0;
-  }
-
-  .prose :where(tbody td, tfoot td):not(:where([class~='not-prose'] *)) {
-    @apply py-0;
   }
 
   .prose tbody tr {

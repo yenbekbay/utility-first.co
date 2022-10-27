@@ -66,7 +66,7 @@ export default function Index({
           <br />
           <small className="text-[70%]">
             We’re open for business and new collaborations from{' '}
-            <span className="whitespace-nowrap">Nov 2022</span>.{' '}
+            <span className="whitespace-nowrap">Jan 2023</span>.{' '}
             <a
               href="mailto:hello@utility-first.co"
               className="whitespace-nowrap">
